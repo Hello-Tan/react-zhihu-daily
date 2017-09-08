@@ -1,0 +1,1 @@
+export const SET_STORIES_HEIGHT = 'SET_STORIES_HEIGHT'

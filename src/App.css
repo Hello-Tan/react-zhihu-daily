@@ -1,0 +1,5 @@
+@font-face{font-family:icon-font;src:url(./common/fonts/font_1467357626_5109937.eot);src:url(./common/fonts/font_1467357626_5109937ie.eot) format("embedded-opentype"),url(./common/fonts/font_1467357626_5109937.woff) format("woff"),url(./common/fonts/font_1467357626_5109937.ttf) format("truetype"),url(./common/fonts/font_1467357626_5109937.svg) format("svg")}
+.loading{
+    width: 100%;
+    text-align: center;
+}
