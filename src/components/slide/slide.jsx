@@ -11,7 +11,8 @@ export default class slide extends Component{
     constructor(props) {
         super(props)
         this.state = {
-            touch: {}
+            touch: {},
+            THRESHOLD: this.props.threshold * this.props.width
         }
         this.touchstart = this.touchstart.bind(this)
         this.touchmove = this.touchmove.bind(this)
@@ -25,7 +26,7 @@ export default class slide extends Component{
         autoPlay: true,
         interval: 4000,
         speed: 400,
-        threshold: 0.5,
+        threshold: 0.3,
         index: 0
     }
 
@@ -116,10 +117,10 @@ export default class slide extends Component{
                 this.changeIndex(this.props.index)
                 return this.transition()
             }
-            if (Math.abs(offsetX) > this.props.threshold && offsetX < 0) {
+            if (Math.abs(offsetX) > this.state.THRESHOLD && offsetX < 0) {
                 this.changeIndex(this.props.index + 1)
             }
-            if (Math.abs(offsetX) > this.props.threshold && offsetX > 0) {
+            if (Math.abs(offsetX) > this.state.THRESHOLD && offsetX > 0) {
                 this.changeIndex(this.props.index - 1)            }
             return this.transition()
         }, false)
