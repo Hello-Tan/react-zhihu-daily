@@ -5,6 +5,7 @@ export default class StoriesDetail extends Component {
     render () {
         return (
             <div className="stories-detail">
+                <p>hello world</p>
             </div>
         )
     }
